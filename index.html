@@ -1335,60 +1335,6 @@
             });
         });
 
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form values
-            const name = contactForm.querySelector('input[type="text"]').value;
-            const email = contactForm.querySelector('input[type="email"]').value;
-            const phone = contactForm.querySelector('input[type="tel"]').value;
-            const service = contactForm.querySelectorAll('input[type="text"]')[1].value;
-            const message = contactForm.querySelector('textarea').value;
-            
-            // Option 1: mailto link (opens user's email client)
-            const subject = encodeURIComponent(`New Enquiry from ${name}`);
-            const body = encodeURIComponent(
-                `Name: ${name}\n` +
-                `Email: ${email}\n` +
-                `Phone: ${phone}\n` +
-                `Service: ${service}\n\n` +
-                `Message:\n${message}`
-            );
-            
-            window.location.href = `mailto:info@dreamglazing.co.uk?subject=${subject}&body=${body}`;
-            
-            // Show success message
-            alert('Opening your email client... Please send the email to complete your enquiry.');
-            contactForm.reset();
-            
-            // Option 2: For a backend solution, uncomment this instead:
-            /*
-            fetch('YOUR_BACKEND_URL/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    name: name,
-                    email: email,
-                    phone: phone,
-                    service: service,
-                    message: message
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('Thank you! Your message has been sent successfully.');
-                contactForm.reset();
-            })
-            .catch(error => {
-                alert('Sorry, there was an error sending your message. Please email us directly at info@dreamglazing.co.uk');
-            });
-            */
-        });
-
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
