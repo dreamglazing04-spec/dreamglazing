@@ -834,11 +834,17 @@
 
             .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
-            .form-row {
-                grid-template-columns: 1fr;
+            .contact-item {
+                padding: 2rem 1.5rem;
             }
+
+            .contact h2 {
+                font-size: 2.5rem;
+            }
+        }
 
             .gallery-grid {
                 grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -1092,24 +1098,33 @@
 
     <section class="contact" id="contact">
         <div class="contact-container">
-            <h2>Let's Transform Your Home</h2>
-            <p>Get in touch for a free consultation and quote</p>
+            <h2>Get In Touch</h2>
+            <p>Ready to transform your home? Contact us today for a free consultation and quote</p>
+            
             <div class="contact-grid">
                 <div class="contact-item">
                     <div class="contact-icon-wrap">📞</div>
                     <h3>Call Us</h3>
-                    <p>07XXX XXX XXX</p>
+                    <p>For immediate assistance</p>
+                    <a href="tel:07XXXXXXXXX">07XXX XXX XXX</a>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon-wrap">📧</div>
                     <h3>Email Us</h3>
-                    <p>info@dreamglazing.co.uk</p>
+                    <p>Send us your requirements</p>
+                    <a href="mailto:info@dreamglazing.co.uk">info@dreamglazing.co.uk</a>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon-wrap">📍</div>
-                    <h3>Coverage</h3>
-                    <p>All UK Regions</p>
+                    <h3>Service Area</h3>
+                    <p>Professional service nationwide</p>
+                    <a href="#portfolio">Covering All UK</a>
                 </div>
+            </div>
+
+            <div class="contact-cta">
+                <h3>Available 7 Days a Week</h3>
+                <p>We're here to help with all your door and window installation needs. Call or email us anytime for expert advice and competitive quotes.</p>
             </div>
         </div>
     </section>
